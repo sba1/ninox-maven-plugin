@@ -16,6 +16,9 @@ public class NinoxMojo extends AbstractMojo
 {
     public void execute() throws MojoExecutionException
     {
+    	/** Instanciate a new oort config */
+		OortConfiguration oortConfig = new OortConfiguration();
+
         getLog().info( "Hello, world." );
     }
 }
