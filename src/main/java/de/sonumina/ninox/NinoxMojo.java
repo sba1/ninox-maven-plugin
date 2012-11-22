@@ -7,9 +7,7 @@ import org.apache.maven.plugins.annotations.Mojo;
 import owltools.ontologyrelease.OortConfiguration;
 
 /**
- * Packages the ontologies.
- * 
- * @goal compile
+ * Runs oort on the ontologies.
  */
 @Mojo(name = "compile")
 public class NinoxMojo extends AbstractMojo
