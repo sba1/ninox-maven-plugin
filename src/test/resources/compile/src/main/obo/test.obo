@@ -1,0 +1,7 @@
+[Term]
+id: TO:0000001
+name: root
+
+[Term]
+id: TO:0000002
+name: child one of root
