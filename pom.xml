@@ -11,6 +11,7 @@
 
   <modules>
   	<module>ninox-maven-plugin</module>
+  	<module>ninox-maven-plugin-it</module>
   </modules>
   
 </project>
