@@ -12,7 +12,7 @@ import org.apache.maven.it.Verifier;
 import org.apache.maven.it.util.ResourceExtractor;
 import org.junit.Test;
 
-public class NinoxMojoTest//AbstractMojoTestCase
+public class NinoxMojoTest
 {
 	private String LOCAL_REPO_PATH = "/tmp/ninox-maven-plugin-repo";
 	
@@ -39,7 +39,6 @@ public class NinoxMojoTest//AbstractMojoTestCase
 
 		/* Finally, invoke the goal */
 		Verifier verifier = new Verifier(testDir.getAbsolutePath());
-//		verifier.setCliOptions(Arrays.asList("-o"));
 		verifier.setLocalRepo(LOCAL_REPO_PATH);
 		verifier.executeGoal("compile");
 		verifier.resetStreams();
