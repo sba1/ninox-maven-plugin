@@ -72,6 +72,10 @@
         <version>3.2</version>
         <configuration>
           <goalPrefix>ninox</goalPrefix>
+          <!-- As we are using annotatons, the descriptor cannot be generated
+               before compilationm thus we have to skip the error.
+               see http://jira.codehaus.org/browse/MNG-5346 -->
+          <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
         </configuration>
         <executions>
           <execution>
