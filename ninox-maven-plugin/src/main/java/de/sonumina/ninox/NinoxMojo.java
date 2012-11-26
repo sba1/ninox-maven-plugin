@@ -44,6 +44,7 @@ public class NinoxMojo extends AbstractMojo
 		{
 			getLog().info("Adding file " + file);
 			oortConfig.addPath(new File(oboDir,file).getAbsolutePath());
+			oortConfig.setAllowFileOverWrite(true);
 		}
 		
 		try {
