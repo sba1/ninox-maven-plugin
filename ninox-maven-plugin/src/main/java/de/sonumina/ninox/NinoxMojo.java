@@ -25,6 +25,9 @@ public class NinoxMojo extends AbstractMojo
 	@Parameter( defaultValue = "${project.compileSourceRoots}", readonly = true, required = true )
 	private List<String> compileSourceRoots;
 
+	@Parameter( defaultValue = "true", readonly = true, required = false)
+	private boolean checkConsistency;
+	
     public void execute() throws MojoExecutionException
     {
     	File oboDir = new File(new File(compileSourceRoots.get(0)).getParentFile(),"obo");
@@ -39,12 +42,15 @@ public class NinoxMojo extends AbstractMojo
 
 		getLog().info("Using " + oboSourcePath);
 
-		
+		/* Scan dir in obo directory and add every to  */
 		for (String file : oboDir.list())
 		{
 			getLog().info("Adding file " + file);
 			oortConfig.addPath(new File(oboDir,file).getAbsolutePath());
+			oortConfig.setCheckConsistency(checkConsistency);
 			oortConfig.setAllowFileOverWrite(true);
+			
+			getLog().info(oortConfig.toString());
 		}
 		
 		try {

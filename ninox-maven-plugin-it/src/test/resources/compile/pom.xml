@@ -16,6 +16,9 @@
      <extensions>true</extensions>
      <executions>
       <execution>
+       <configuration>
+        <checkConsistency>false</checkConsistency>
+       </configuration>
        <phase>compile</phase>
        <goals>
         <goal>compile</goal>
