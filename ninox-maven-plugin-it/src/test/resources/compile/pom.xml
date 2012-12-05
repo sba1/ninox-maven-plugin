@@ -16,6 +16,7 @@
      <extensions>true</extensions>
      <executions>
       <execution>
+       <id>execution1</id>
        <configuration>
         <checkConsistency>false</checkConsistency>
        </configuration>
@@ -23,6 +24,11 @@
        <goals>
         <goal>compile</goal>
        </goals>
+      </execution>
+      <execution>
+       <id>execution2</id>
+	   <phase>package</phase>
+       <goals><goal>package</goal></goals>
 	  </execution>
      </executions>
     </plugin>

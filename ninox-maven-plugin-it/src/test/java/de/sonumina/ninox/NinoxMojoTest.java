@@ -40,7 +40,7 @@ public class NinoxMojoTest
 		/* Finally, invoke the goal */
 		Verifier verifier = new Verifier(testDir.getAbsolutePath());
 		verifier.setLocalRepo(LOCAL_REPO_PATH);
-		verifier.executeGoal("compile");
+		verifier.executeGoal("install");
 		verifier.resetStreams();
 	
 		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File(testDir.getAbsolutePath(),verifier.getLogFileName()))));
