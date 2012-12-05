@@ -25,6 +25,9 @@ public class NinoxMojo extends AbstractMojo
 	@Parameter( defaultValue = "${project.compileSourceRoots}", readonly = true, required = true )
 	private List<String> compileSourceRoots;
 
+	@Parameter(defaultValue="${project.build.directory}",required=true)
+	private File outputDirectory;
+
 	@Parameter( defaultValue = "true", readonly = true, required = false)
 	private boolean checkConsistency;
 	
@@ -49,6 +52,7 @@ public class NinoxMojo extends AbstractMojo
 			oortConfig.addPath(new File(oboDir,file).getAbsolutePath());
 			oortConfig.setCheckConsistency(checkConsistency);
 			oortConfig.setAllowFileOverWrite(true);
+			oortConfig.setBase(outputDirectory);
 			
 			getLog().info(oortConfig.toString());
 		}
